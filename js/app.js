@@ -34,31 +34,32 @@ var cats = [
   }
 ];
 
-var Cat = function(data) {
-  var self = this;
-  this.name = ko.observable(data.name);
-  this.url = ko.observable(data.url);
-  this.clicks = ko.observable(data.clicks);
-  this.nicknames = ko.observableArray(data.nicknames);
-
-  this.title = ko.computed(function() {
-    if (this.clicks() < 10) {
-      return "Newborn";
-    } else if (this.clicks() < 20) {
-      return "Baby";
-    } else if (this.clicks() < 40) {
-      return "Toddler";
-    } else if (this.clicks() < 80) {
-      return "Child";
-    } else if (this.clicks() < 160) {
-      return "Teen";
-    } else if (this.clicks() < 320) {
-      return "Adult";
-    } else {
-      return "Elderly";
-    }
-  }, this);
-};
+class Cat {
+  constructor(data) {
+    var self = this;
+    this.name = ko.observable(data.name);
+    this.url = ko.observable(data.url);
+    this.clicks = ko.observable(data.clicks);
+    this.nicknames = ko.observableArray(data.nicknames);
+    this.title = ko.computed(function() {
+      if (this.clicks() < 10) {
+        return "Newborn";
+      } else if (this.clicks() < 20) {
+        return "Baby";
+      } else if (this.clicks() < 40) {
+        return "Toddler";
+      } else if (this.clicks() < 80) {
+        return "Child";
+      } else if (this.clicks() < 160) {
+        return "Teen";
+      } else if (this.clicks() < 320) {
+        return "Adult";
+      } else {
+        return "Elderly";
+      }
+    }, this);
+  }
+}
 
 var ViewModel = function() {
   var self = this;
