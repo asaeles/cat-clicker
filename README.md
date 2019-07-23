@@ -4,7 +4,7 @@ Inspired by a famous Facebook trivial game "Cow Clicker" now its time for cats.
 
 The app is an SPA based on the KnockoutJS framwework that displays a list of cat names, clicking the name will show the cat's details, clicking the cat image will increment the click count for the selected cat and advance the age of the cat.
 
-Additionally, pressing the Admin button will show a form where you cna edit the cat details name, URL and click count.
+Additionally, pressing the Admin button will show a form where you can edit the cat details name, URL and click count.
 
 The app uses local storage to save data.
 
